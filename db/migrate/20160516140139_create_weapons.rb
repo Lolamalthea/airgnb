@@ -10,6 +10,7 @@ class CreateWeapons < ActiveRecord::Migration
       t.date :availability_end_on
       t.float :longitude
       t.float :latitude
+      t.references :user, index: true, foreign_key: true
 
       t.timestamps null: false
     end
