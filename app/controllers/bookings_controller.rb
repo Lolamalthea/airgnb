@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+<<<<<<< HEAD
   def show
     @booking = Booking.find(params[:id])
   end
@@ -15,4 +16,6 @@ class BookingsController < ApplicationController
   def booking_params
   params.require(@booking).permit(:weapon, :user, :start_date_on, :end_date_on, :price_paid)
   end
+=======
+>>>>>>> 65eaec8579224804702406a6557b1eb84d8d9ba4
 end
