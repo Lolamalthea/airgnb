@@ -11,9 +11,56 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160516140810) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "bookings", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "weapon_id"
+    t.date     "start_date_on"
+    t.date     "end_date_on"
+    t.float    "price_paid"
+    t.integer  "user_rating"
+    t.text     "user_review"
+    t.integer  "owner_rating"
+    t.text     "owner_review"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "bookings", ["user_id"], name: "index_bookings_on_user_id", using: :btree
+  add_index "bookings", ["weapon_id"], name: "index_bookings_on_weapon_id", using: :btree
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "avatar"
+    t.string   "phone"
+    t.string   "email"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "weapons", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "address"
+    t.float    "price"
+    t.string   "picture"
+    t.date     "availability_start_on"
+    t.date     "availability_end_on"
+    t.float    "longitude"
+    t.float    "latitude"
+    t.integer  "user_id"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
+
+  add_index "weapons", ["user_id"], name: "index_weapons_on_user_id", using: :btree
+
+  add_foreign_key "bookings", "users"
+  add_foreign_key "bookings", "weapons"
+  add_foreign_key "weapons", "users"
 end
