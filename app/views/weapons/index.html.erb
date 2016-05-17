@@ -3,21 +3,32 @@
   <div class="row">
     <% @weapons.each do |weapon| %>
       <div class="col-xs-12 col-sm-4">
-        <div class="card text-center">
 
-          <% if weapon.picture %>
-            <div class="card-header" style="background-image: url('<%= image_path weapon.picture %>')">
-            </div>
-          <% else %>
-            <div class="card-header" style="background-image: url('http://www.seriouseats.com/images/2014/11/20141104-cocktail-party-old-fashioneds-holiday-vicky-wasik-3.jpg')">
+        <div class="weapon-box-index">
+          <div class="flexbox product-picture-index" style="background: url(<%= asset_path('weapon_2.jpg') %>);">
+            <h1 class="text-center"><%= weapon.name %></h1>
+            <p class="btn btn-danger price-index"><%= weapon.price.to_i %>€/day</p>
+            <div class="owner-avatar">
+             <%= link_to image_tag "user_2.jpg", :width => 50 %>
+          </div>
+          </div>
+          <p><%= weapon.description %></p>
+          <%= link_to "" do %>
+            <div>
+              <h2 class="btn btn-primary btn-center btn-margin">Details</h2>
             </div>
           <% end %>
-          <div class="card-body">
-            <%= link_to weapon.name, weapon_path(weapon) %>
-          </div>
         </div>
+
       </div>
     <% end %>
   </div>
 </div>
+
+
+
+
+
+
+
 
