@@ -1,54 +1,23 @@
-<h1 class="text-center">All you need is here!</h1>
 
+  <div class="container">
+  <div class="row">
+    <% @weapons.each do |weapon| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card text-center">
 
-  <div class="card bg-orange text-center padded features">
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <%= link_to image_tag "gun3.jpg" %>
-        <h4>Soft and tender</h4>
-        <p>Price per day:</p>
+          <% if weapon.picture %>
+            <div class="card-header" style="background-image: url('<%= image_path weapon.picture %>')">
+            </div>
+          <% else %>
+            <div class="card-header" style="background-image: url('http://www.seriouseats.com/images/2014/11/20141104-cocktail-party-old-fashioneds-holiday-vicky-wasik-3.jpg')">
+            </div>
+          <% end %>
+          <div class="card-body">
+            <%= link_to weapon.name, weapon_path(weapon) %>
+          </div>
+        </div>
       </div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-       <%= link_to image_tag "gun3.jpg" %>
-       <h4>No cash issues anymore</h4>
-        <p>Price per day:</p>
-
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-       <%= link_to image_tag "gun2.jpg" %>
-        <h4>Nice people have one too</h4>
-        <p>Price per day:</p>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <%= link_to image_tag "gun3.jpg" %>
-        <h4>Share and love</h4>
-        <p>Price per day:</p>
-      </div>
-    </div>
+    <% end %>
   </div>
+</div>
 
-  <div class="card bg-orange text-center padded features">
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <%= link_to image_tag "gun1.jpg" %>
-        <h4>Soft and tender</h4>
-        <p>Price per day:</p>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-       <%= link_to image_tag "gun2.jpg" %>
-       <h4>No cash issues anymore</h4>
-        <p>Price per day:</p>
-
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-       <%= link_to image_tag "gun3.jpg" %>
-        <h4>Nice people have one too</h4>
-        <p>Price per day:</p>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <%=  link_to image_tag "gun4.jpg" %>
-        <h4>Share and love</h4>
-        <p>Price per day:</p>
-      </div>
-    </div>
-  </div>
