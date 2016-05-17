@@ -23,8 +23,6 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
-
-
 end
 
 group :production do
@@ -32,3 +30,7 @@ group :production do
 end
 
 gem 'devise'
+gem 'cloudinary'
+gem 'carrierwave'
+gem 'omniauth-facebook'
+

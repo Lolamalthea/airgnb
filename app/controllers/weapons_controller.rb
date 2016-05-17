@@ -1,6 +1,5 @@
 class WeaponsController < ApplicationController
   before_action :set_weapon, only: [:create, :edit, :update, :destroy]
-  skip_before_action :authenticate_user!, only: :index
   def index
     @weapons = Weapon.all
   end
@@ -40,6 +39,6 @@ class WeaponsController < ApplicationController
   end
 
   def weapon_params
-  params.require(@weapons).permit(:name, :description, :address, :price, :picture, :availability_start_on, :availability_end_on, :longitude, :latitude)
+  params.require(@weapons).permit(:name, :description, :address, :price, :picture, :picture_cache, :availability_start_on, :availability_end_on, :longitude, :latitude)
   end
 end
