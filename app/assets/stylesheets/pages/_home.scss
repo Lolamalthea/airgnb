@@ -2,3 +2,36 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+.banner {
+  color: white;
+  text-align: center;
+  height: calc(100vh - 60px);
+  background-size: cover !important;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  h1 {
+    font-size: 70px;
+    font-weight: bold;
+    text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+    padding-bottom: 50px;
+    padding-bottom: 20px;
+  }
+  p {
+    font-size: 30px;
+    font-weight: lighter;
+    color: $red;
+    // color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 60px;
+  }
+  .btn {
+    background-color: $yellow;
+    font-family: $header-font;
+    border: none;
+  }
+  .btn:hover {
+    color: $gray-darker;
+    background-color: $yellow;
+    border: none;
+  }
+}
