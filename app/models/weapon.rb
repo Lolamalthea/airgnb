@@ -8,4 +8,7 @@ CATEGORIES = ["Kalach", "gun"]
   validates :category, inclusion: { in: CATEGORIES, allow_nil: false }
   validates :address, presence: true
   validates :price, presence: true
+
+  mount_uploader :picture, PhotoUploader
+
 end
