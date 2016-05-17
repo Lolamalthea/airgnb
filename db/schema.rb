@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20160517100224) do
     t.datetime "updated_at",                          null: false
     t.string   "provider"
     t.string   "uid"
+    t.string   "picture"
     t.string   "token"
     t.datetime "token_expiry"
   end

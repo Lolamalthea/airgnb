@@ -40,6 +40,6 @@ class WeaponsController < ApplicationController
   end
 
   def weapon_params
-  params.require(@weapons).permit(:name, :description, :address, :price, :picture, :availability_start_on, :availability_end_on, :longitude, :latitude)
+  params.require(@weapons).permit(:name, :description, :address, :price, :picture, :picture_cache, :availability_start_on, :availability_end_on, :longitude, :latitude)
   end
 end
