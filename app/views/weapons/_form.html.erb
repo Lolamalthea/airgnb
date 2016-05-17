@@ -1,0 +1,6 @@
+<%= simple_form_for(@weapon) do |f| %>
+    <%= f.input :name, placeholder: "Weapon name" %>
+    <%= f.input :picture %>
+    <%= f.input :picture_cache, as: :hidden %>
+    <%= f.button :submit, class: "btn btn-primary"  %>
+<% end %>
