@@ -1,3 +1,37 @@
 // Place all the styles related to the weapons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#wrapper-weapon {
+  padding: 50px 0;
+}
+#user-profile {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+#user-profile-avatar img {
+  width: 100px;
+}
+#user-profile-infos {
+  padding-left: 20px;
+  h2 {
+  font-size: 18px;
+  margin-top: 0px;
+  }
+  p {
+  font-size: 14px;
+  }
+}
+.star-enable {
+  color: $yellow-star;
+}
+.star-disable {
+  color: $gray-lighter;
+}
+#weapon-form {
+  background-color: $gray-lighter;
+  padding: 20px 20px;
+}
+#weapon-form h2 {
+  font-size: 20px;
+}
