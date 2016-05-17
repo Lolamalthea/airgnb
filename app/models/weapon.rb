@@ -10,5 +10,4 @@ CATEGORIES = ["Kalach", "gun"]
   validates :price, presence: true
 
   mount_uploader :picture, PhotoUploader
-
 end

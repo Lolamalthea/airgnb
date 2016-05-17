@@ -11,4 +11,6 @@ class User < ActiveRecord::Base
   validates :address, presence: true
   validates :email, presence: true, uniqueness: true
   validates :phone, presence:true, uniqueness: true
+
+  mount_uploader :picture, PhotoUploader
 end
