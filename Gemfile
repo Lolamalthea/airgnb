@@ -32,3 +32,5 @@ end
 gem 'devise'
 gem 'cloudinary'
 gem 'carrierwave'
+gem 'omniauth-facebook'
+
