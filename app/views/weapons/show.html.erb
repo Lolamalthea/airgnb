@@ -1,25 +1,19 @@
-<h1>show page</h1>
-
-
-<div class="media">
-  <div class="media-body">
-    <div class="media-section">
-      <h2>Pictures</h2>
-      ...
-    </div>
-    <div class="media-section">
-      <h2>Description</h2>
-      ...
-    </div>
+<div class="col-xs-3">
+  <div class="container">
+    <div><%= cl_image_tag @weapon.user.picture, height: 300, width: 300, crop: :fill %></div>
+    <h1><%= @weapon.user.name %></h1>
+    <h2 class="btn btn-primary">Contact</h2>
+    <p><%= @weapon.user.description %></p>
   </div>
-  <div class="media-aside">
-    <div class="media-section">
-      <h2>Share</h2>
-      ...
-    </div>
-    <div class="media-section">
-      <h2>382 upvotes</h2>
-      ...
-    </div>
+</div>
+
+
+<div class="col-xs-9">
+  <div class="container">
+    <h1><%= @weapon.name %></h1>
+    <h2 class="btn btn-primary"><%= @weapon.description %> per day</h2>
+    <div><%= cl_image_tag @weapon.user.picture, height: 300, width: 700, crop: :fill %></div>
+    <p><%= @weapon.description %></p>
+    <h2 class="btn btn-primary">Book now</h2>
   </div>
 </div>
