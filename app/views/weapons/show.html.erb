@@ -1,19 +1,31 @@
-<div class="col-xs-3">
-  <div class="container">
-    <div><%= cl_image_tag @weapon.user.picture, height: 300, width: 300, crop: :fill %></div>
-    <h1><%= @weapon.user.name %></h1>
-    <h2 class="btn btn-primary">Contact</h2>
-    <p><%= @weapon.user.description %></p>
-  </div>
-</div>
+<div class="row">
 
-
-<div class="col-xs-9">
-  <div class="container">
-    <h1><%= @weapon.name %></h1>
-    <h2 class="btn btn-primary"><%= @weapon.description %> per day</h2>
-    <div><%= cl_image_tag @weapon.user.picture, height: 300, width: 700, crop: :fill %></div>
-    <p><%= @weapon.description %></p>
-    <h2 class="btn btn-primary">Book now</h2>
+  <div class="col-xs-4">
+    <div class="user-box">
+      <div class="flexbox">
+        <%= link_to image_tag "gun2.jpg" %>
+      </div>
+      <h1 class="text-center"><%= @weapon.name %></h1>
+      <h2 class="btn btn-primary btn-center btn-margin">Contact</h2>
+      <p><%= @weapon.description %></p>
+    </div>
   </div>
+
+  <div class="col-xs-8">
+    <div class="weapon-box">
+      <h1 class="text-center"><%= @weapon.name %></h1>
+      <h2 class="btn btn-danger"><%= @weapon.price %> per day</h2>
+      <div class="flexbox product-picture">
+        <%= link_to image_tag "gun2.jpg" %>
+      </div>
+      <p><%= @weapon.description %></p>
+      <%= link_to "" do %>
+        <div>
+          <h2 class="btn btn-primary btn-center">Book Now</h2>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+
 </div>
