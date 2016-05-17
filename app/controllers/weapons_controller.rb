@@ -1,6 +1,5 @@
 class WeaponsController < ApplicationController
   before_action :set_weapon, only: [:create, :edit, :update, :destroy]
-
   def index
     @weapons = Weapon.all
   end

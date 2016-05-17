@@ -1,35 +1,18 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.jpg" %>
+    <%= image_tag "breakfast_made_easy.png" %>
   <% end %>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-    <!-- Search form -->
-    <form action="" class="navbar-wagon-search">
-      <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
-      <button type="submit" class="navbar-wagon-search-btn">
-        <i class="fa fa-search"></i>
-      </button>
-    </form>
-
-    <!-- Notification -->
-    <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link" do %>
-      <div class="badge-container">
-        <i class="fa fa-envelope-o"></i>
-        <div class="badge badge-blue">3</div>
-      </div>
-    <% end %>
-
 
     <!-- Button Inscription -->
-    <%= link_to "Share a weapon !", new_weapon_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
-    <!-- Button Inscription -->
-    <%= link_to "Sign up", new_user_registration_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
+    <%= link_to "Share fun, share a gun !", new_weapon_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
     <!-- Button Connexion -->
     <% if user_signed_in? %>
+      <%= link_to "Sign out", destroy_user_session_path, class: "navbar-wagon-item navbar-wagon-button btn", method: :delete %>
       <div class="navbar-wagon-item">
         <div class="dropdown">
           <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
@@ -48,6 +31,8 @@
         </div>
       </div>
     <% else %>
+      <!-- Button Inscription -->
+      <%= link_to "Sign up", new_user_registration_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
       <%= link_to "Log in", new_user_session_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
     <% end %>
   </div>
