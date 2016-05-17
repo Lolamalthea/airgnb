@@ -3,8 +3,17 @@
  * ------------------------------------- */
 // Google fonts
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
+// @import url("https://fonts.googleapis.com/css?family=Permanent+Marker");
+// @import url("https://fonts.googleapis.com/css?family=Rock+Salt");
+// @import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light");
+// @import url("https://fonts.googleapis.com/css?family=Nothing+You+Could+Do");
+// @import url("https://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here");
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah");
 $base-font: "Open Sans", "Helvetica", "sans-serif";
-$header-font: "Raleway", "Helvetica", "sans-serif";
+// $header-font: "Raleway", "Helvetica", "sans-serif";
+// $header-font: "Permanent Marker", "Helvetica", "sans-serif";
+// $header-font: "Rock Salt", "Helvetica", "sans-serif";
+$header-font: "Gloria Hallelujah", "Helvetica", "sans-serif";
 
 // Local fonts (uncomment following lines)
 // @font-face {
@@ -26,7 +35,8 @@ $base-height: 1.4;
 // Scheme
 $brand-color: #D23333;
 
-$red: #EE5F5B;
+// $red: #EE5F5B;
+$red: #E50000;
 $blue: #469AE0;
 $yellow: #FDB631;
 $orange: #E67E22;
