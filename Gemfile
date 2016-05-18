@@ -16,6 +16,8 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 
+gem 'faker'
+
 source "https://rails-assets.org" do
   gem 'rails-assets-bootstrap-datepicker'
 end
@@ -28,7 +30,6 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'spring'
-  gem 'faker'
 end
 
 group :production do
