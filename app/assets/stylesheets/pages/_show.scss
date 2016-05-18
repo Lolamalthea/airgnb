@@ -1,0 +1,60 @@
+.user-box {
+  background: #F5F5F5;
+  height: 700px;
+  margin-top: 15px;
+  margin-left: 15px;
+  padding: 40px
+}
+
+.weapon-box {
+  background: #F5F5F5;
+  height: 700px;
+  margin-top: 15px;
+  margin-right: 15px;
+  padding: 50px
+}
+
+.btn-center {
+  width:25%;
+  display:block;
+  margin: 0 auto
+}
+
+.btn-margin {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.product-picture {
+  background-size: cover !important;
+  height: 400px;
+}
+
+.price {
+  position: absolute;
+  right: 15px;
+}
+
+.weapon-box h1 {
+  position: absolute;
+  left: 15px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  color: white
+}
+
+.weapon-box p {
+  margin-top: 15px;
+  text-align: justify;
+}
+
+.user-box p {
+  text-align: justify;
+}
