@@ -2,7 +2,7 @@ class Weapon < ActiveRecord::Base
   belongs_to :user
   has_many :bookings
 
-CATEGORIES = ["Revolver", "Riffle", "Kalachnikov", "Grenade launcher", "Other"]
+CATEGORIES = ["Any stuff available", "Hand gun", "Assault riffle", "Light automatic", "Heavy weapon"]
 
   validates :name, presence: true
   # validates :category, inclusion: { in: CATEGORIES, allow_nil: false }
