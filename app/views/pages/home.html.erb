@@ -12,10 +12,12 @@
       </label>
       <input name="from" id="from-date" type="text" class="form-control date-picker" data-date-format="dd/mm/yyyy" placeholder="from">
       <input name="to" id="to-date" type="text" class="form-control date-picker" data-date-format="dd/mm/yyyy" placeholder="to">
-      <input type="submit" class="btn btn-primary" value="Search">
+      <button type="submit" class="btn btn-primary">Search</button>
     </form>
   </div>
 </div>
-<% products = @weapons.last(7)  %>
-<%= render 'shared/card', products: products %>
+<div class="home-wrapper">
+  <% products = @weapons.last(6)  %>
+  <%= render 'shared/card', products: products %>
+</div>
 
