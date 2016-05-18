@@ -2,7 +2,6 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :home
 
   def home
-    @weapon = Weapon.new
-    @booking = Booking.new
+    @weapons = Weapon.all
   end
 end

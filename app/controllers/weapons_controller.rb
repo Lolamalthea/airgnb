@@ -4,7 +4,14 @@ class WeaponsController < ApplicationController
   skip_before_action :weapons, only: :index
 
   def index
-    @weapons = Weapon.all
+    @category = Weapon::CATEGORIES[(params[:category].to_i) - 1]
+    @from = params[:from]
+    @to = params[:to]
+    if @category == 'Any stuff available'
+      @weapons = Weapon.all
+    else
+      @weapons = Weapon.where("category = ?", @category)
+    end
   end
 
   def show

@@ -1,7 +1,8 @@
 <%= simple_form_for(@weapon) do |f| %>
     <%= f.input :name, placeholder: "Weapon name" %>
-    <%= f.input :category, placeholder: "Category" %>
+    <%= f.input :category, collection: Weapon::CATEGORIES %>
     <%= f.input :description, placeholder: "Description" %>
+    <%= f.input :address, placeholder: "Address" %>
     <%= f.input :price, placeholder: "Price" %>
     <%= f.input :picture  %>
     <%= f.input :picture_cache, as: :hidden %>
