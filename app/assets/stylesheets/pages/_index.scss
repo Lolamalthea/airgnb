@@ -1,1 +1,47 @@
 @import "home";
+
+.weapon-box-index {
+  background: #F5F5F5;
+  height: 4 00px;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.btn-margin-index {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.product-picture-index {
+  background-size: cover !important;
+  height: 150px;
+}
+
+.price-index {
+  position: absolute;
+  right: 5px;
+  margin-top: 0px;
+  font-size: 12px;
+}
+
+.owner-avatar {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+
+.weapon-box-index h1 {
+  position: absolute;
+  left: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: white;
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+.weapon-box-index p {
+  margin-top: 15px;
+  text-align: justify;
+  font-size: 12px;
+}

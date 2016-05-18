@@ -1,5 +1,6 @@
 class WeaponsController < ApplicationController
-  before_action :set_weapon, only: [ :edit, :update, :destroy]
+
+  before_action :set_weapon, only: [:show, :edit, :update, :destroy]
   skip_before_action :weapons, only: :index
 
   def index
