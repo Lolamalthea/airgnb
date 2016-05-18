@@ -2,7 +2,7 @@
 
 .weapon-box-index {
   background: #F5F5F5;
-  height: 4 00px;
+  height: 320px;
   padding: 15px;
   margin-top: 15px;
 }
@@ -17,27 +17,30 @@
   height: 150px;
 }
 
-.price-index {
+.weapon-box-index h2 {
   position: absolute;
+  top: 5px;
   right: 5px;
-  margin-top: 0px;
-  font-size: 12px;
+  margin-top: 5px;
+  color: white;
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+.weapon-box-index h1 {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  margin-top: 5px;
+  color: white;
+  font-size: 16px;
+  padding-left: 10px;
 }
 
 .owner-avatar {
   position: absolute;
   right: 5px;
   bottom: 5px;
-}
-
-.weapon-box-index h1 {
-  position: absolute;
-  left: 5px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  color: white;
-  font-size: 16px;
-  padding-left: 10px;
 }
 
 .weapon-box-index p {
