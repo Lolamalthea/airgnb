@@ -1,10 +1,9 @@
-
   <div class="container">
+  <h1 class="text-center">Latest arrivals</h1>
   <div class="row">
     <% @weapons.each do |weapon| %>
       <div class="col-xs-12 col-sm-4">
         <div class="card text-center">
-
           <% if weapon.picture %>
             <div class="card-header" style="background-image: url('<%= image_path weapon.picture %>')">
             </div>
