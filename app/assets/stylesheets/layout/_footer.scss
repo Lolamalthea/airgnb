@@ -1,7 +1,16 @@
 // Your footer style
 .footer {
-  background-color: #696969;
+  background-color: $yellow;
   background-size: 100% 15px;
-  margin-top: 20px;
-  padding: 40px;
+  // margin-top: 20px;
+  padding: 25px;
 }
+
+.footer .fa {
+  color: $red;
+}
+
+.footer a {
+  color: white;
+}
+
