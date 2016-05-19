@@ -40,4 +40,4 @@ gem 'devise'
 gem 'cloudinary'
 gem 'carrierwave'
 gem 'omniauth-facebook'
-
+gem "geocoder"

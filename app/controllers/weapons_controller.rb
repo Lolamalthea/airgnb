@@ -7,6 +7,7 @@ class WeaponsController < ApplicationController
     @category = Weapon::CATEGORIES[(params[:category].to_i) - 1]
     @from = params[:from]
     @to = params[:to]
+    @address = params[:address]
     if @category == 'Any stuff available'
       @weapons = Weapon.all
     else
