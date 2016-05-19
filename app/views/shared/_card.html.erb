@@ -7,12 +7,12 @@
             <h1 class="text-center"><%= product.name %></h1>
             <h2><%= product.price.to_i %>€</h2>
             <div class="owner-avatar">
-             <%= link_to image_tag product.user.picture, :width => 50 %>
+             <%= image_tag product.user.picture, :width => 50 %>
           </div>
           </div>
           <p class="address"><%= product.address %></p>
           <p><%= product.description.first(100) %></p>
-          <%= link_to weapon_path(product) do %>
+          <%= link_to weapon_path(product, from: @from, to: @to) do %>
             <div>
               <h3 class="btn btn-primary btn-center btn-margin">Details</h3>
             </div>

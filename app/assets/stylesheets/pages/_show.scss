@@ -67,3 +67,14 @@
 .user-box p {
   text-align: justify;
 }
+
+.btn {
+  background-color: $yellow;
+  font-family: $header-font;
+  border: none;
+}
+.btn:hover {
+  color: $gray-darker;
+  background-color: $yellow;
+  border: none;
+}

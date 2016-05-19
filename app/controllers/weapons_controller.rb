@@ -35,6 +35,8 @@ class WeaponsController < ApplicationController
 
   def show
     @booking = Booking.new
+    @from = params[:from]
+    @to = params[:to]
   end
 
   def new
