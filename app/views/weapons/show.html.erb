@@ -18,11 +18,11 @@
         <h2><%= @weapon.price.to_i %>€</h2>
       </div>
       <p><%= @weapon.description %></p>
-      <%= link_to "" do %>
-        <div>
-          <h3 class="btn btn-primary btn-center btn-margin">Book Now</h3>
-        </div>
-      <% end %>
+      <form action='<%= weapons_url %>' class="form-group text-center form-inline">
+        <input name="from" id="from-date" type="text" class="form-control date-picker" data-date-format="dd/mm/yyyy" placeholder=<%= @from %>>
+        <input name="to" id="to-date" type="text" class="form-control date-picker" data-date-format="dd/mm/yyyy" placeholder=<%= @to %>>
+        <button type="submit" class="btn btn-primary">Book now</button>
+      </form>
     </div>
   </div>
 
