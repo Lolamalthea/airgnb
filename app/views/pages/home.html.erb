@@ -4,20 +4,20 @@
     <p>Collect your guns right and fast, don't miss tomorrow's breakfast</p>
     <form action='<%= weapons_url %>' class="control-group form-inline">
       <label><span id="intro">You need </span>
-        <select name="category" id="category-search" class="form-control">
+        <select name="category" id="category-search" class="form-control input-lg">
           <% Weapon::CATEGORIES.each_with_index do |c, i| %>
           <option value=<%= i + 1 %> ><%= c %></option>
           <% end %>
         </select>
       </label>
-      <input name="address" type="text" class="form-control" placeholder="city">
-      <input name="from" id="from-date" type="text" class="form-control date-picker" data-date-format="dd/mm/yyyy" placeholder="from">
-      <input name="to" id="to-date" type="text" class="form-control date-picker" data-date-format="dd/mm/yyyy" placeholder="to">
-      <button type="submit" class="btn btn-primary">Search</button>
+      <input name="address" type="text" class="form-control input-lg" placeholder="city">
+      <input name="from" id="from-date" type="text" class="form-control input-lg date-picker" data-date-format="dd/mm/yyyy" placeholder="from">
+      <input name="to" id="to-date" type="text" class="form-control input-lg date-picker" data-date-format="dd/mm/yyyy" placeholder="to">
+      <button type="submit" class="btn btn-primary input-lg">Search</button>
     </form>
   </div>
 </div>
-<div class="home-wrapper">
+<div class="home-wrapper btmspace">
   <% products = @weapons.last(6)  %>
   <%= render 'shared/card', products: products %>
 </div>

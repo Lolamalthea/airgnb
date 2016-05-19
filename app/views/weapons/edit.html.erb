@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <div class="btmspace">
+        <h1>Edit your baby</h1>
+
+        <%= simple_form_for(@weapon) do |f| %>
+          <%= f.input :name, value: @weapon.name %>
+          <%= f.input :category, value: @weapon.category, collection: Weapon::CATEGORIES %>
+          <%= f.input :description, value: @weapon.description %>
+          <%= f.input :address, value: @weapon.address %>
+          <%= f.input :price, value: @weapon.price %>
+          <div class="flexbox edit-picture" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 40%), url(<%= asset_path(@weapon.picture) %>);"></div>
+          <%= f.input :picture %>
+          <%= f.input :picture_cache, as: :hidden %>
+          <%= f.button :submit, class: "btn btn-danger"  %>
+        <% end %>
+        <%= link_to 'Back', weapons_path %>
+      </div>
+    </div>
+  </div>
+</div>
