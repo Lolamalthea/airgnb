@@ -1,12 +1,28 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+<div id="content">
+    <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+        <li class="active"><a href="#red" data-toggle="tab">My profile</a></li>
+        <li><a href="#orange" data-toggle="tab">My Babys</a></li>
+        <li><a href="#yellow" data-toggle="tab">My Bookings</a></li>
+    </ul>
+    <div id="my-tab-content" class="tab-content">
+        <div class="tab-pane active" id="red">
+        <div class="row">
+    <div class="col-xs-6 col-sm-3 col-sm-offset-1">
+        <div class="card-header" style="background-image: url('<%= image_path current_user.picture %>')">
+            </div>
+        <div><h4>Name: <%= current_user.name %></h4></div>
+        <br>
+        <div><h4>About me: <%= current_user.description %></h4></div>
+    </div>
+
+    <div class="col-xs-6 col-sm-3 col-sm-offset-1">
       <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= f.error_notification %>
 
         <div class="form-inputs">
+          <%= f.input :name, placeholder: "Name" %>
           <%= f.input :email, required: true, autofocus: true %>
 
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -16,6 +32,9 @@
           <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
           <%= f.input :password_confirmation, required: false %>
           <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+          <%= f.input :description, placeholder: "Some nice words about me" %>
+          <%= f.input :picture %>
+          <%= f.input :picture_cache, as: :hidden %>
         </div>
 
         <div class="form-actions">
@@ -30,4 +49,29 @@
       <%= link_to "Back", :back %>
     </div>
   </div>
+
+        </div>
+        <div class="tab-pane" id="orange">
+            <h1>Orange</h1>
+            <p>orange orange orange orange orange</p>
+        </div>
+        <div class="tab-pane" id="yellow">
+            <h1>Yellow</h1>
+            <p>yellow yellow yellow yellow yellow</p>
+        </div>
+        <div class="tab-pane" id="green">
+            <h1>Green</h1>
+            <p>green green green green green</p>
+        </div>
+        <div class="tab-pane" id="blue">
+            <h1>Blue</h1>
+            <p>blue blue blue blue blue</p>
+        </div>
+    </div>
+    <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $('#tabs').tab();
+    });
+</script>
 </div>
+
