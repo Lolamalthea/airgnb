@@ -21,6 +21,16 @@ class WeaponsController < ApplicationController
         @weapons = Weapon.where("category = ?", @category).near(@address, 1000)
       end
     end
+    @markers = Gmaps4rails.build_markers(@weapons) do |weapon, marker|
+      marker.lat weapon.latitude
+      marker.lng weapon.longitude
+      marker.infowindow render_to_string(:partial => "/weapons/infowindow", :locals => { :weapon => weapon })
+      marker.title "#{weapon.name}"
+
+    end
+    # @json = @weapons.to_gmaps4rails do |weapon, marker|
+    #   marker.json({ :name => weapon.name})
+    # end
   end
 
   def show
