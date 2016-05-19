@@ -3,6 +3,8 @@
 //= require bootstrap-sprockets
 //= require bootstrap-datepicker
 //= require_tree .
+//= require underscore
+//= require gmaps/google
 
 $(document).ready(function() {
  // the DOM is now ready, you can traverse it,
