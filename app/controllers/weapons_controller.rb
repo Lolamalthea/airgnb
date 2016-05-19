@@ -7,10 +7,19 @@ class WeaponsController < ApplicationController
     @category = Weapon::CATEGORIES[(params[:category].to_i) - 1]
     @from = params[:from]
     @to = params[:to]
+    @address = params[:address]
     if @category == 'Any stuff available'
-      @weapons = Weapon.all
+      if @address == ''
+        @weapons = Weapon.all
+      else
+        @weapons = Weapon.near(@address, 1000)
+      end
     else
-      @weapons = Weapon.where("category = ?", @category)
+      if @address == ''
+        @weapons = Weapon.where("category = ?", @category)
+      else
+        @weapons = Weapon.where("category = ?", @category).near(@address, 1000)
+      end
     end
   end
 

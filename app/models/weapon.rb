@@ -10,4 +10,8 @@ CATEGORIES = ["Any stuff available", "Hand gun", "Assault riffle", "Light automa
   validates :price, presence: true
 
   mount_uploader :picture, PhotoUploader
+
+  geocoded_by :address
+  after_validation :geocode, if: :address_changed?
+
 end
