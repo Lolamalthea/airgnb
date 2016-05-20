@@ -18,11 +18,19 @@
         <h2><%= @weapon.price.to_i %>€</h2>
       </div>
       <p><%= @weapon.description %></p>
-      <form action='<%= weapons_url %>' class="form-group text-center form-inline">
-        <input name="from" id="from-date" type="text" class="form-control date-picker" data-date-format="dd/mm/yyyy" value=<%= @from %>>
-        <input name="to" id="to-date" type="text" class="form-control date-picker" data-date-format="dd/mm/yyyy" value=<%= @to %>>
-        <button type="submit" class="btn btn-primary">Book now</button>
-      </form>
+
+      <%= simple_form_for([@weapon, @booking], url: weapon_bookings_url(@weapon), html: { method: :post, class: "form-group text-center form-inline" }) do |f| %>
+        <%= f.error_notification %>
+
+        <div class="form-inputs">
+          <%= f.input :start_date_on, as: :string, input_html: { class: "date-picker", value: @from }, html: { class: "form-control" } %>
+          <%= f.input :end_date_on, as: :string, input_html: { class: "date-picker", value: @to }, html: { class: "form-control" } %>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit, "Book it now !" %>
+        </div>
+      <% end %>
+
     </div>
   </div>
 

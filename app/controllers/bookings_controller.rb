@@ -4,10 +4,17 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.find(params[:id])
-    @booking = Booking.new(booking_params)
-    @booking.save
-    redirect_to booking_path(@booking)
+    raise
+    @end_date_on = booking_params
+    @booking = Booking.new (booking_params)
+    @weapon = Weapon.find(params[:weapon_id])
+    @booking.weapon = @weapon
+    @booking.user = current_user
+    if @booking.save
+      redirect_to user_bookings_path(user: current_user)
+    else
+      render 'weapons/show'
+    end
   end
 
   private
