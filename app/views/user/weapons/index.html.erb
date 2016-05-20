@@ -1,9 +1,12 @@
 <div id="content">
     <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-        <li><a href="#red" data-toggle="tab">My profile</a></li>
-        <li class="active"><a href="#orange" data-toggle="tab">My Babys</a></li>
-        <li><a href="#yellow" data-toggle="tab">My Bookings</a></li>
+        <li><a href="#My profile" data-toggle="tab">My profile</a></li>
+
+        <li class="active"><a href="#My Babys" data-toggle="tab">My Babys</a></li>
+
+        <li><a href="#My Bookings" data-toggle="tab">My Bookings</a></li>
     </ul>
+
     <div id="my-tab-content" class="tab-content">
       <%= render 'shared/card', products: @weapons %>
     </div>
@@ -11,6 +14,10 @@
     <div class="col-xs-6 col-sm-3 col-sm-offset-1">
       <%= link_to "Back", :back %>
     </div>
+
+
+
+
     <script type="text/javascript">
       jQuery(document).ready(function ($) {
           $('#tabs').tab();
