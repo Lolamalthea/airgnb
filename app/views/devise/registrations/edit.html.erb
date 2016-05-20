@@ -1,7 +1,7 @@
 <div id="content">
     <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
         <li class="active"><a href="#red" data-toggle="tab">My profile</a></li>
-        <li><a href="#orange" data-toggle="tab">My Babys</a></li>
+        <li><%= link_to "My Babies", user_weapons_path(user: current_user) %></li>
         <li><a href="#yellow" data-toggle="tab">My Bookings</a></li>
     </ul>
     <div id="my-tab-content" class="tab-content">
@@ -30,8 +30,6 @@
           <% end %>
 
           <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
-          <%= f.input :password_confirmation, required: false %>
-          <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
           <%= f.input :description, placeholder: "Some nice words about me" %>
           <%= f.input :picture %>
           <%= f.input :picture_cache, as: :hidden %>
@@ -49,12 +47,12 @@
       <%= link_to "Back", :back %>
     </div>
   </div>
+</div>
 
-        </div>
-        <div class="tab-pane" id="orange">
-            <h1>Orange</h1>
-            <div class="flexbox product-picture" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.1) 40%), url(<%= asset_path(current_user.weapons.first.picture) %>);">
-        </div>
+<div class="tab-pane" id="orange">
+  <p>hello</p>
+</div>
+
         <div class="tab-pane" id="yellow">
             <h1>Yellow</h1>
             <p>yellow yellow yellow yellow yellow</p>
