@@ -19,8 +19,8 @@
       </div>
       <p><%= @weapon.description %></p>
       <form action='<%= weapons_url %>' class="form-group text-center form-inline">
-        <input name="from" id="from-date" type="text" class="form-control date-picker" data-date-format="dd/mm/yyyy" placeholder=<%= @from %>>
-        <input name="to" id="to-date" type="text" class="form-control date-picker" data-date-format="dd/mm/yyyy" placeholder=<%= @to %>>
+        <input name="from" id="from-date" type="text" class="form-control date-picker" data-date-format="dd/mm/yyyy" value=<%= @from %>>
+        <input name="to" id="to-date" type="text" class="form-control date-picker" data-date-format="dd/mm/yyyy" value=<%= @to %>>
         <button type="submit" class="btn btn-primary">Book now</button>
       </form>
     </div>
