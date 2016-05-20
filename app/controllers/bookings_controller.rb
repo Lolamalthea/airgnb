@@ -4,7 +4,6 @@ class BookingsController < ApplicationController
   end
 
   def create
-    raise
     @end_date_on = booking_params
     @booking = Booking.new (booking_params)
     @weapon = Weapon.find(params[:weapon_id])
