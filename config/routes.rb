@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
 namespace :user do
   resources :weapons, only: [:index]
+  resources :bookings, only: [:index]
 end
 
 end
