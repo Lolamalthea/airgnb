@@ -2,7 +2,7 @@
     <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
         <li class="active"><a href="#red" data-toggle="tab">My profile</a></li>
         <li><%= link_to "My Babies", user_weapons_path(user: current_user) %></li>
-        <li><a href="#yellow" data-toggle="tab">My Bookings</a></li>
+        <li><%= link_to "My Bookings", user_bookings_path(user: current_user) %></a></li>
     </ul>
     <div id="my-tab-content" class="tab-content">
         <div class="tab-pane active" id="red">

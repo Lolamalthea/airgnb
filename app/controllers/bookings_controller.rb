@@ -4,13 +4,15 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @end_date_on = booking_params
-    @booking = Booking.new (booking_params)
+    booking_hash = booking_params
+    booking_hash[:start_date_on] = Date.strptime(booking_hash[:start_date_on], "%m/%d/%Y")
+    booking_hash[:end_date_on] = Date.strptime(booking_hash[:end_date_on], "%m/%d/%Y")
+    @booking = Booking.new(booking_hash)
     @weapon = Weapon.find(params[:weapon_id])
     @booking.weapon = @weapon
     @booking.user = current_user
     if @booking.save
-      redirect_to user_bookings_path(user: current_user)
+      redirect_to user_bookings_path
     else
       render 'weapons/show'
     end
@@ -19,6 +21,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(@booking).permit(:weapon, :user, :start_date_on, :end_date_on, :price_paid)
+    params.require(:booking).permit(:weapon, :user, :start_date_on, :end_date_on)
   end
 end
